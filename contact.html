@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chainsaw Club | Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html" aria-label="Chainsaw Club home"><span class="logo-icon">CS</span><span>CHAINSAW<br><b>CLUB</b></span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="characters.html">Characters</a><a href="guide.html">Guide</a><a class="active" href="contact.html">Contact</a></nav>
+  </header>
+
+  <main class="wrap page">
+    <section class="page-heading"><p class="label">Get in touch</p><h1>Contact</h1><p>Have a question or a favorite character? Send us a message.</p></section>
+    <section class="columns contact-columns">
+      <div class="contact-info"><img class="poster" src="Images/anime-poster.png" alt="Chainsaw Man anime poster" loading="lazy"><h2>Let's talk<br><em>devils.</em></h2><p>Fill out the form to open your email app.</p><div class="details"><span>EMAIL</span><strong>hello@chainsawclub.example</strong></div></div>
+      <form class="form" action="mailto:hello@chainsawclub.example" method="post" enctype="text/plain">
+        <div class="field"><label for="email">Your email <span>*</span></label><input type="email" id="email" name="email" placeholder="name@example.com" required></div>
+        <div class="field"><label for="message">Your message <span>*</span></label><textarea id="message" name="message" rows="7" placeholder="Write a message..." required></textarea></div>
+        <button class="button primary" type="submit">Send <span>↗</span></button>
+        <p class="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer"><span>CHAINSAW CLUB / FAN PAGE</span><span>Issue 1 / 2026</span></footer>
+</body>
+</html>
