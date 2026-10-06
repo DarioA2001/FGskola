@@ -1,4 +1,4 @@
-```css
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +7,13 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f4f1ec;
-  color: #111;
+  background: #eeeeee;
+  color: #222;
 }
 
 a {
   text-decoration: none;
-  color: #111;
+  color: #222;
 }
 
 img {
@@ -21,11 +21,12 @@ img {
 }
 
 .header {
+  background: white;
+  padding: 20px 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 6%;
-  border-bottom: 2px solid #111;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo {
@@ -36,7 +37,7 @@ img {
 }
 
 .logo-icon {
-  background: #d71920;
+  background: #d62828;
   color: white;
   width: 40px;
   height: 40px;
@@ -47,137 +48,117 @@ img {
 }
 
 .logo b {
-  color: #d71920;
+  color: #d62828;
 }
 
 .nav {
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
-.nav a:hover,
+.nav a:hover {
+  color: #d62828;
+}
+
 .nav .active {
-  color: #d71920;
+  color: #d62828;
 }
 
-.hero {
-  width: 90%;
+.red {
+  color: #d62828;
+  font-weight: bold;
+}
+
+.home {
+  width: 85%;
   max-width: 1100px;
-  margin: auto;
-  padding: 70px 0;
+  margin: 60px auto;
   display: flex;
   align-items: center;
   gap: 50px;
 }
 
-.hero-text {
+.home-text {
   width: 50%;
 }
 
-.hero-text h1 {
-  font-size: 65px;
-  line-height: 1;
+.home-text h1 {
+  font-size: 55px;
   margin: 15px 0;
 }
 
-.hero-text em {
-  color: #d71920;
+.home-text em {
+  color: #d62828;
   font-style: normal;
 }
 
-.red {
-  color: #d71920;
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
+.home-text p {
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.hero-text > p:not(.red) {
-  margin-bottom: 25px;
-  max-width: 450px;
+.home-image {
+  width: 50%;
 }
 
-.hero-img {
+.home-image img {
   width: 100%;
-  height: 500px;
+  height: 450px;
   object-fit: cover;
 }
 
-.buttons {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
 .button {
-  background: #d71920;
-  color: white;
-  padding: 14px 20px;
-  border: none;
-  font-weight: bold;
   display: inline-block;
+  background: #d62828;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.why {
-  width: 90%;
+.intro {
+  width: 85%;
   max-width: 1100px;
-  margin: auto;
-  padding: 50px 0;
-  border-top: 2px solid #111;
+  margin: 80px auto;
+  padding-top: 40px;
+  border-top: 1px solid #aaa;
 }
 
-.why h2 {
-  font-size: 45px;
-  margin: 15px 0 30px;
+.intro h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
 }
 
-.why h2 span {
-  color: #d71920;
+.intro > p {
+  max-width: 650px;
+  line-height: 1.6;
 }
 
-.cards {
+.boxes {
   display: flex;
+  margin-top: 35px;
 }
 
-.card {
+.box {
+  background: white;
   width: 33.33%;
-  padding: 30px;
-  min-height: 200px;
-  background: #ddd8d0;
+  padding: 25px;
+  border: 1px solid #ddd;
 }
 
-.card h3 {
-  margin: 40px 0 10px;
-  font-size: 24px;
+.box h3 {
+  margin-bottom: 10px;
 }
 
-.card p {
-  color: #444;
-}
-
-.red-card {
-  background: #d71920;
-  color: white;
-}
-
-.red-card p {
-  color: white;
-}
-
-.black-card {
-  background: #171717;
-  color: white;
-}
-
-.black-card p {
-  color: #ccc;
+.box p {
+  line-height: 1.5;
 }
 
 .page {
-  width: 90%;
+  width: 85%;
   max-width: 1100px;
-  margin: auto;
-  padding: 70px 0;
+  margin: 60px auto;
 }
 
 .title {
@@ -185,106 +166,142 @@ img {
 }
 
 .title h1 {
-  font-size: 65px;
+  font-size: 55px;
   margin: 10px 0;
 }
 
-.columns {
+.title p:last-child {
+  color: #555;
+}
+
+.people {
+  display: flex;
+  gap: 25px;
+}
+
+.person {
+  background: white;
+  width: 33.33%;
+  padding-bottom: 25px;
+}
+
+.person img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.person h2,
+.person p,
+.person .tag {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.person h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.person p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.person .red {
+  font-size: 13px;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #222;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.guide {
   display: flex;
   gap: 50px;
 }
 
-.steps,
-.quote,
-.contact,
-.form {
-  width: 50%;
+.guide-text {
+  width: 60%;
 }
 
 .step {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   padding: 25px 0;
-  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #bbb;
 }
 
-.step b {
-  color: #d71920;
+.step span {
+  background: #d62828;
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .step h2 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.quote {
-  background: #171717;
-  color: white;
-  padding: 25px;
+.step p {
+  line-height: 1.5;
 }
 
-.quote img {
+.guide-image {
+  width: 40%;
+  background: white;
+  padding: 20px;
+}
+
+.guide-image img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   margin-bottom: 20px;
 }
 
-.quote span {
-  color: #d71920;
-  font-size: 45px;
-}
-
-.quote blockquote {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.people {
-  display: flex;
-  gap: 30px;
-}
-
-.person {
-  width: 33.33%;
-  border-top: 2px solid #111;
-  padding-top: 20px;
-}
-
-.person img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.person h2 {
-  font-size: 30px;
-  margin: 10px 0;
-}
-
-.tag {
-  display: inline-block;
-  border: 1px solid #111;
-  padding: 5px 10px;
-  margin-top: 15px;
-  font-size: 12px;
-}
-
-.contact img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.contact h2 {
-  font-size: 40px;
+.guide-image h2 {
   margin-bottom: 10px;
 }
 
-.contact h2 em {
-  color: #d71920;
+.guide-image p {
+  line-height: 1.5;
+}
+
+.contact {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-info img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.contact-info h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.contact-info em {
+  color: #d62828;
+}
+
+.contact-info > p {
+  line-height: 1.5;
 }
 
 .email {
@@ -293,26 +310,22 @@ img {
   border-top: 1px solid #aaa;
 }
 
-.email span {
-  display: block;
-  color: #d71920;
+.email p {
+  color: #d62828;
   font-size: 12px;
-  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .form {
-  border-top: 2px solid #111;
-  padding-top: 20px;
+  width: 50%;
+  background: white;
+  padding: 30px;
 }
 
 .form label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   font-weight: bold;
-}
-
-.form label span {
-  color: #d71920;
 }
 
 .form input,
@@ -322,7 +335,7 @@ img {
   margin-bottom: 20px;
   border: 1px solid #aaa;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .form textarea {
@@ -330,12 +343,12 @@ img {
 }
 
 .footer {
-  border-top: 2px solid #111;
-  padding: 20px 6%;
+  background: white;
+  border-top: 1px solid #ccc;
+  padding: 20px 7%;
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
-  font-weight: bold;
+  font-size: 12px;
 }
 
 @media (max-width: 600px) {
@@ -353,70 +366,49 @@ img {
     font-size: 12px;
   }
 
-  .hero {
+  .home {
     display: block;
-    padding: 45px 0;
+    width: 90%;
+    margin: 40px auto;
   }
 
-  .hero-text {
+  .home-text {
     width: 100%;
   }
 
-  .hero-text h1 {
-    font-size: 48px;
+  .home-text h1 {
+    font-size: 40px;
   }
 
-  .hero-img {
-    height: 350px;
-    margin-top: 35px;
+  .home-image {
+    width: 100%;
+    margin-top: 30px;
   }
 
-  .buttons {
+  .home-image img {
+    height: 300px;
+  }
+
+  .intro {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .boxes {
     display: block;
   }
 
-  .buttons a {
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  .why {
-    padding: 40px 0;
-  }
-
-  .why h2 {
-    font-size: 38px;
-  }
-
-  .cards {
-    display: block;
-  }
-
-  .card {
+  .box {
     width: 100%;
   }
 
   .page {
-    padding: 45px 0;
+    width: 90%;
+    margin: 40px auto;
   }
 
   .title h1 {
-    font-size: 48px;
-  }
-
-  .columns {
-    display: block;
-  }
-
-  .steps,
-  .quote,
-  .contact,
-  .form {
-    width: 100%;
-  }
-
-  .quote {
-    margin-top: 30px;
+    font-size: 45px;
   }
 
   .people {
@@ -425,15 +417,37 @@ img {
 
   .person {
     width: 100%;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
 
   .person img {
-    height: 400px;
+    height: 350px;
+  }
+
+  .guide {
+    display: block;
+  }
+
+  .guide-text {
+    width: 100%;
+  }
+
+  .guide-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .contact-info {
+    width: 100%;
   }
 
   .form {
-    margin-top: 35px;
+    width: 100%;
+    margin-top: 30px;
   }
 
   .footer {
@@ -446,4 +460,3 @@ img {
     margin: 5px;
   }
 }
-```
