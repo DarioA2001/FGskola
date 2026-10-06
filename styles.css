@@ -1,31 +1,30 @@
+```css
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
   background: #f4f1ec;
   color: #111;
-  line-height: 1.5;
 }
 
 a {
-  color: #111;
   text-decoration: none;
+  color: #111;
 }
 
 img {
-  width: 100%;
-  display: block;
+  max-width: 100%;
 }
 
 .header {
-  padding: 20px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 6%;
   border-bottom: 2px solid #111;
 }
 
@@ -34,13 +33,6 @@ img {
   align-items: center;
   gap: 10px;
   font-weight: bold;
-  line-height: 1;
-}
-
-.logo b,
-.red,
-.title .red {
-  color: #d71920;
 }
 
 .logo-icon {
@@ -50,8 +42,12 @@ img {
   height: 40px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.logo b {
+  color: #d71920;
 }
 
 .nav {
@@ -59,40 +55,41 @@ img {
   gap: 25px;
 }
 
-.nav a {
-  font-weight: bold;
-}
-
 .nav a:hover,
 .nav .active {
   color: #d71920;
 }
 
-.hero,
-.why,
-.page {
+.hero {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-}
-
-.hero {
-  min-height: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  padding: 70px 0;
+  display: flex;
   align-items: center;
+  gap: 50px;
 }
 
-.hero h1 {
-  font-size: 70px;
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 65px;
   line-height: 1;
   margin: 15px 0;
 }
 
-.hero h1 em {
+.hero-text em {
   color: #d71920;
   font-style: normal;
+}
+
+.red {
+  color: #d71920;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .hero-text > p:not(.red) {
@@ -101,33 +98,37 @@ img {
 }
 
 .hero-img {
+  width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
 .buttons {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
 }
 
 .button {
   background: #d71920;
   color: white;
-  border: 0;
   padding: 14px 20px;
+  border: none;
   font-weight: bold;
-  cursor: pointer;
+  display: inline-block;
 }
 
 .why {
-  padding: 60px 0;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 0;
   border-top: 2px solid #111;
 }
 
 .why h2 {
   font-size: 45px;
-  margin-bottom: 30px;
+  margin: 15px 0 30px;
 }
 
 .why h2 span {
@@ -135,11 +136,11 @@ img {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
 }
 
 .card {
+  width: 33.33%;
   padding: 30px;
   min-height: 200px;
   background: #ddd8d0;
@@ -147,7 +148,7 @@ img {
 
 .card h3 {
   margin: 40px 0 10px;
-  font-size: 25px;
+  font-size: 24px;
 }
 
 .card p {
@@ -173,6 +174,9 @@ img {
 }
 
 .page {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
   padding: 70px 0;
 }
 
@@ -181,21 +185,25 @@ img {
 }
 
 .title h1 {
-  font-size: 70px;
-  line-height: 1;
-  margin: 10px 0 15px;
+  font-size: 65px;
+  margin: 10px 0;
 }
 
 .columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 50px;
 }
 
+.steps,
+.quote,
+.contact,
+.form {
+  width: 50%;
+}
+
 .step {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  gap: 20px;
+  display: flex;
+  gap: 25px;
   padding: 25px 0;
   border-top: 1px solid #aaa;
 }
@@ -205,7 +213,7 @@ img {
 }
 
 .step h2 {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .quote {
@@ -215,9 +223,10 @@ img {
 }
 
 .quote img {
+  width: 100%;
   height: 300px;
   object-fit: cover;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .quote span {
@@ -226,23 +235,24 @@ img {
 }
 
 .quote blockquote {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   margin: 10px 0;
 }
 
 .people {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 30px;
 }
 
 .person {
+  width: 33.33%;
   border-top: 2px solid #111;
   padding-top: 20px;
 }
 
 .person img {
+  width: 100%;
   height: 400px;
   object-fit: cover;
   margin-bottom: 20px;
@@ -250,19 +260,19 @@ img {
 
 .person h2 {
   font-size: 30px;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 .tag {
   display: inline-block;
   border: 1px solid #111;
-  padding: 4px 10px;
-  margin-top: 10px;
+  padding: 5px 10px;
+  margin-top: 15px;
   font-size: 12px;
-  font-weight: bold;
 }
 
 .contact img {
+  width: 100%;
   max-height: 400px;
   object-fit: cover;
   margin-bottom: 20px;
@@ -287,7 +297,7 @@ img {
   display: block;
   color: #d71920;
   font-size: 12px;
-  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .form {
@@ -297,8 +307,8 @@ img {
 
 .form label {
   display: block;
+  margin-bottom: 8px;
   font-weight: bold;
-  margin-bottom: 7px;
 }
 
 .form label span {
@@ -308,11 +318,11 @@ img {
 .form input,
 .form textarea {
   width: 100%;
-  padding: 14px;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #aaa;
-  font-size: 16px;
   font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 .form textarea {
@@ -321,7 +331,7 @@ img {
 
 .footer {
   border-top: 2px solid #111;
-  padding: 20px 5%;
+  padding: 20px 6%;
   display: flex;
   justify-content: space-between;
   font-size: 11px;
@@ -331,15 +341,12 @@ img {
 @media (max-width: 600px) {
 
   .header {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+    display: block;
   }
 
   .nav {
-    width: 100%;
-    justify-content: space-between;
-    gap: 8px;
+    margin-top: 20px;
+    gap: 15px;
   }
 
   .nav a {
@@ -348,59 +355,95 @@ img {
 
   .hero {
     display: block;
-    padding: 40px 0;
+    padding: 45px 0;
   }
 
-  .hero h1 {
-    font-size: 50px;
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
   }
 
   .hero-img {
     height: 350px;
-    margin-top: 40px;
+    margin-top: 35px;
   }
 
   .buttons {
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
   }
 
-  .button {
-    width: 100%;
-    text-align: center;
-  }
-
-  .cards,
-  .columns,
-  .people {
-    grid-template-columns: 1fr;
+  .buttons a {
+    display: block;
+    margin-bottom: 15px;
   }
 
   .why {
     padding: 40px 0;
   }
 
-  .why h2,
-  .title h1 {
-    font-size: 45px;
+  .why h2 {
+    font-size: 38px;
+  }
+
+  .cards {
+    display: block;
   }
 
   .card {
-    min-height: 180px;
+    width: 100%;
+  }
+
+  .page {
+    padding: 45px 0;
+  }
+
+  .title h1 {
+    font-size: 48px;
+  }
+
+  .columns {
+    display: block;
+  }
+
+  .steps,
+  .quote,
+  .contact,
+  .form {
+    width: 100%;
+  }
+
+  .quote {
+    margin-top: 30px;
+  }
+
+  .people {
+    display: block;
+  }
+
+  .person {
+    width: 100%;
+    margin-bottom: 45px;
   }
 
   .person img {
     height: 400px;
   }
 
-  .columns {
-    gap: 40px;
+  .form {
+    margin-top: 35px;
   }
 
   .footer {
-    flex-direction: column;
-    gap: 8px;
+    display: block;
     text-align: center;
   }
-}
 
+  .footer span {
+    display: block;
+    margin: 5px;
+  }
+}
+```
